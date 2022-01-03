@@ -1,0 +1,62 @@
+//***** VARIABLE ***** //
+// Breakpoints for DESKTOP FIRST Methodology
+$desktop-medium: 1183px;
+$desktop: 1088px;
+$tablet-xl: 1087px;
+$tablet-large: 896px;
+$tablet: 736px;
+$mobile-large: 520px;
+$mobile: 360px;
+$mobile-small: 359px;
+$mobile-extra-small: 320px;
+
+:root {
+  // Typography
+  font-size: 18px;
+  @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+
+//***** MIXINS ***** //
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin absolute-wide-block {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin media-max($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin media-between($min-width, $max-width) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin media-min($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin basic-transition($property, $timing: .3s , $ease: ease-in-out) {
+  transition : $property $timing $ease;
+}
+
+@mixin custom-transition($property...) {
+  transition : $property .3s ease-in-out;
+}
