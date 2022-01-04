@@ -47,39 +47,6 @@
 
 .mobile-menu-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 35px;
-  height: 35px;
-  background: #2F6DCE;
-  border-radius: 5px;
-  padding: 8px 5px 8px 6px;
-
-  .burger-line {
-    display: block;
-    width: 24px;
-    height: 3px;
-    background: #FFFFFF;
-    border-radius: 9px;
-  }
-
-  .burger-line:nth-child(2) {
-    width: 17px;
-    border-radius: 12px;
-  }
-
-  &-close {
-    .burger-line:nth-child(1) {
-      transform: rotate(45deg);
-    }
-    .burger-line:nth-child(2) {
-      display: none;
-    }
-    .burger-line:nth-child(3) {
-      transform: rotate(45deg);
-    }
-  }
 }
 
 .upper-bar {
@@ -293,6 +260,7 @@
     font-size: 70px;
     width: 35px;
     overflow: hidden;
+    color: #2F6DCE;
   }
 
   &__addon-content {
