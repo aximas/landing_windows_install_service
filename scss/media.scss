@@ -1,0 +1,128 @@
+@include media-max($desktop) {
+
+  .wrapper {
+    max-width: 672px;
+  }
+
+  .upper-bar {
+    text-align: center;
+    margin-bottom: 24px;
+
+    &__column {
+      .whats-app-link {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .main .header {
+    margin-bottom: 48px;
+  }
+
+  .header {
+    margin-bottom: 48px;
+
+    &__menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include basic-transition(transform, 1s, ease);
+
+      &.hide-mobile-menu {
+        transform: translateX(-100%);
+      }
+
+      &.show-mobile-menu {
+        transform: translateX(0);
+      }
+    }
+
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+
+    &__column {
+      width: 100%;
+
+      &:nth-child(2) {
+        background-image: none;
+      }
+    }
+
+    &__description {
+      font-size: 34px;
+      line-height: 100%;
+      margin-bottom: 12px;
+
+      span {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0 auto;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 auto 48px auto;
+    }
+
+    &__btn-wrapper {
+      margin: 0 auto 32px auto;
+
+      &:before {
+        top: -70%;
+        right: -10%;
+        width: 70px;
+        transform: scale(0.6) rotate(-30deg);
+      }
+    }
+
+    &__btn {
+      font-size: 16px;
+    }
+
+    &__addons-wrapper {
+      padding-left: 0;
+      align-items: center;
+    }
+  }
+
+  .site-logo img {
+    width: 165px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+
+}
+
+@include media-max($tablet) {
+
+  .wrapper {
+    max-width: 320px;
+  }
+
+  .banner {
+
+    &__column {
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+    }
+  }
+
+}
