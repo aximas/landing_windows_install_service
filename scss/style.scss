@@ -133,7 +133,7 @@
   }
 
   &__description {
-    font-family: Uni Sans, sans-serif;
+    font-family: "Uni Sans", sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 84px;
@@ -189,11 +189,6 @@
     box-sizing: border-box;
     box-shadow: 0px 22px 44px -12px rgba(0, 90, 233, 0.35);
     border-radius: 39px;
-    @include basic-transition(box-shadow);
-
-    &:hover {
-      box-shadow: none;
-    }
   }
 
   &__btn-description {
@@ -274,33 +269,207 @@
 
 .btn {
   width: 100%;
-  padding: 24px 53px;
+  padding: 24px 43px;
   text-transform: uppercase;
   font-size: 22px;
   line-height: 100%;
+  @include basic-transition(box-shadow);
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 // *****  section main  ***** //
 
 
 // ***** section winter sale  ***** //
-//.advantages {
-//
-//  &__title {
-//    max-width: 928px;
-//    width: 100%;
-//    padding: 8px 30px;
-//    background-color: #2F6DCE;
-//    border-radius: 6px;
-//    -webkit-clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
-//    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
-//
-//    font-family: Uni Sans, sans-serif;
-//    font-weight: 900;
-//    font-size: 32px;
-//    line-height: 40px;
-//    color: #FFFFFF;
-//  }
-//}
+.advantages {
 
+  &__title {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    padding: 8px 30px;
+    background-color: #2F6DCE;
+    border-radius: 6px;
+    margin-bottom: 56px;
 
+    font-family: "Uni Sans", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFFFFF;
+
+    &:before {
+      width: 28px;
+      height: 100%;
+      position: absolute;
+      content: '';
+      top: 0;
+      right: -14px;
+      transform: skewX(-10deg);
+      background-color: #2F6DCE;
+      border-radius: 6px;
+      z-index: 10;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 77px;
+    }
+  }
+
+  &__block {
+    max-width: 882px;
+    width: 100%;
+
+    &-title {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 100%;
+      color: #2D2D2D;
+      margin-bottom: 18px;
+    }
+
+    &-list {
+
+      &-item {
+        font-size: 18px;
+        line-height: 24px;
+        color: #2D2D2D;
+      }
+
+      &-style-checkbox {
+        li {
+          &::marker {
+            content: "\e900";
+          }
+        }
+      }
+
+      &-style-blue-disc {
+        li {
+          &::marker {
+            content: "\e909";
+          }
+        }
+      }
+
+      &-style-points {
+        list-style-type: disc;
+        list-style-position: inside;
+        margin-bottom: 34px;
+      }
+    }
+
+    &-small {
+      max-width: 330px;
+      padding: 18px 28px;
+      border-radius: 6px;
+
+      ul {
+        margin-left: 18px;
+
+        li {
+          padding-left: 6px;
+
+          &::marker {
+            font-family: 'icomoon';
+            font-size: 12px;
+            color: #2F6DCE;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+
+      &-title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .advantages__block-list-item {
+        font-size: 16px;
+      }
+    }
+
+    &-colored {
+      background-color: #E8F6FF;
+    }
+
+    &-outline {
+      outline: 6px solid #2F6DCE;
+      outline-offset: -6px;
+    }
+
+    &-warning {
+      display: flex;
+      font-size: 14px;
+      line-height: 20px;
+      color: #E05C5C;
+      margin-bottom: 39px;
+
+      &-icon {
+        padding-right: 6px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__btn {
+    max-width: 282px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #005AE9;
+    box-shadow: 0px 22px 44px -12px #005AE9;
+    border-radius: 71px;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+
+    &-description {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #F9F9F9;
+    border-radius: 6px;
+
+    &-title {
+      font-family: "Uni Sans", sans-serif;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 48px;
+      color: #2F6DCE;
+      margin-bottom: 33px;
+    }
+
+    &-container {
+      width: 100%;
+
+    }
+  }
+  .swiper {
+    width: 600px;
+    height: 300px;
+  }
+}
 // ***** section winter sale  ***** //

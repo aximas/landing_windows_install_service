@@ -10,7 +10,10 @@
     <!--    google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+
+    <!--    swiper  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <!--  general styles-->
     <link rel="stylesheet" href="css/style.css">
@@ -123,16 +126,16 @@
 
 <section class="winter-sale advantages advantages_theme_white">
     <div class="advantages__wrapper wrapper">
-        <h3 class="advantages__title">
+        <h3 class="advantages__title" id="trapeze">
             ВКЛЮЧАЕМ ЗИМНИЙ РЕЖИМ ПО НИЗКОЙ ЦЕНЕ!
         </h3>
         <div class="advantages__row">
             <div class="advantages__column">
-                <div class="advantages__block advantages__block-small">
-                    <h4 class="advantages__block-title">
+                <div class="advantages__block advantages__block-small advantages__block-colored">
+                    <h4 class="advantages__block-title advantages__block-small-title">
                         Что входит в услугу?
                     </h4>
-                    <ul class="advantages__block-list">
+                    <ul class="advantages__block-list advantages__block-list-style-checkbox">
                         <li class="advantages__block-list-item">
                             Очистка уплотнителя от загрязнений и смазка силиконом;
                         </li>
@@ -148,10 +151,10 @@
                     </ul>
                 </div>
                 <div class="advantages__block advantages__block-small advantages__block-outline">
-                    <h4 class="advantages__block-title">
+                    <h4 class="advantages__block-title advantages__block-small-title">
                         Сколько стоит?
                     </h4>
-                    <ul class="advantages__block-list">
+                    <ul class="advantages__block-list advantages__block-list-style-blue-disc">
                         <li class="advantages__block-list-item">
                             Форточка (S<0,5 м2.): 250 руб.
                         </li>
@@ -167,31 +170,32 @@
             <div class="advantages__column">
                 <div class="advantages__block">
                     <h4 class="advantages__block-title">
-                        Что входит в услугу?
+                        Что Вы получите в итоге?
                     </h4>
-                    <ul class="advantages__block-list">
+                    <ul class="advantages__block-list advantages__block-list-style-points">
                         <li class="advantages__block-list-item">
-                            Очистка уплотнителя от загрязнений и смазка силиконом;
+                            после смазки фурнитуры: бесшумная и легкая работа фурнитуры, увеличение срока службы;
                         </li>
                         <li class="advantages__block-list-item">
-                            Усиление прижима;
+                            после обработки уплотнителя: повышение эластичности и долговечности уплотнителя, уплотнитель
+                            не примерзает к пластику, более плотное прилегание уплотнителя повышает герметичность;
                         </li>
                         <li class="advantages__block-list-item">
-                            Смазка и протяжка фурнитуры;
+                            после усиления прижима: уменьшение продуваний, повышение шумоизоляции;
                         </li>
                         <li class="advantages__block-list-item">
-                            Гарантия: отсутствует;
+                            общий результат: повышение срока.
                         </li>
                     </ul>
                     <div class="advantages__block-warning">
-                        <span class="icon"></span>
+                        <span class="icon icon-warning advantages__block-warning-icon"></span>
                         <small>Внимание! Данная услуга подходит для створок с полностью исправной фурнитурой и
                             уплотнителем, и не устраняет дефекты в работе фурнитуры. Если в работе створок есть какие-то
                             дефекты, то необходимо проводить Большую Регулировку.</small>
                     </div>
                 </div>
                 <div class="advantages__btn-wrapper">
-                    <button class="advantages__btn">
+                    <button class="advantages__btn btn">
                         выезд мастера
                     </button>
                     <small class="advantages__btn-description">
@@ -206,8 +210,18 @@
                 <h4 class="advantages__slider-title">
                     Вместе с Зимником дешевле!
                 </h4>
-                <div class="advantages__slider-wrapper">
-
+                <div class="advantages__slider-container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,6 +233,20 @@
 <script>
     const da = new DynamicAdapt("max");
     da.init();
+</script>
+
+<!-- swiper -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+    const slider = new Swiper('.swiper', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
 </script>
 
 <!-- script -->
