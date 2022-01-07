@@ -1,9 +1,13 @@
 @include media-max($desktop) {
-
   .wrapper {
     max-width: 672px;
   }
 
+  section {
+    padding: 0;
+  }
+
+  // *****  section main  ***** //
   .upper-bar {
     justify-content: center;
     text-align: center;
@@ -191,10 +195,39 @@
       }
     }
   }
-
   .btn {
     font-size: 16px;
   }
+  // *****  section main  ***** //
+
+  // ***** section winter sale  ***** //
+  .advantages {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__column {
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &__block {
+      &-small {
+        max-width: 100%;
+      }
+    }
+
+
+  }
+  .swiper {
+    &-picture {
+      &-slide {
+        max-width: 562px;
+      }
+    }
+  }
+  // ***** section winter sale  ***** //
 
 }
 
@@ -220,6 +253,7 @@
   }
 
   .banner {
+    min-height: 100%;
 
     &__column {
 
@@ -229,5 +263,71 @@
 
     }
   }
+  .advantages {
+    &__title {
+      padding: 8px 20px;
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 22px;
 
+      &:before {
+        width: 26px;
+        right: -7px;
+      }
+    }
+    &__block {
+
+      &-list {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .swiper {
+    &-picture {
+      &-slide {
+        max-width: 310px;
+        display: grid;
+        grid-template-areas:
+                "discount content content content"
+                "discount content content content"
+                "discount price price price";
+
+        &__discount {
+          grid-area: discount;
+        }
+        &__content {
+          grid-area: content;
+          flex-wrap: nowrap;
+          padding: 20px 14px;
+        }
+        &__picture {
+          width: 90px;
+          margin-right: 16px;
+          object-fit: contain;
+        }
+        &__description {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        &__price {
+          grid-area: price;
+          flex-direction: row;
+          align-items: center;
+          padding: 10px 17px;
+          &-before {
+            font-size: 16px;
+            margin-right: 6px;
+            margin-bottom: 0;
+          }
+          &-after {
+            font-size: 28px;
+            &-currency {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.add('hide-mobile-menu');
             event.currentTarget.classList.remove('mobile-menu-toggle-close');
             body.style.overflowY = '';
-
         }
     })
 
