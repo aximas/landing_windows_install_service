@@ -366,6 +366,16 @@ section {
   box-shadow: none;
 }
 
+.advantages {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+@media screen and (max-width: 736px) {
+  .advantages {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .advantages__title {
   position: relative;
   max-width: 900px;
@@ -379,18 +389,6 @@ section {
   font-size: 32px;
   line-height: 40px;
   color: #FFFFFF;
-}
-.advantages__title:before {
-  width: 28px;
-  height: 100%;
-  position: absolute;
-  content: "";
-  top: 0;
-  right: -14px;
-  transform: skewX(-10deg);
-  background-color: #2F6DCE;
-  border-radius: 6px;
-  z-index: 10;
 }
 .advantages__row {
   display: flex;
@@ -494,7 +492,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  padding-top: 50px;
   background-color: #F9F9F9;
   border-radius: 6px;
 }
@@ -546,7 +544,7 @@ section {
   width: 100%;
   padding: 11px 48px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   background: #FFFFFF;
 }
@@ -595,8 +593,17 @@ section {
   content: "\e902";
 }
 .swiper-thumbnail-slides {
-  max-width: 344px;
+  max-width: 384px;
   width: 100%;
+  padding-bottom: 54px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.swiper-thumbnail-slides_wide {
+  max-width: 568px;
+}
+.swiper-thumbnail-slides .swiper-wrapper {
+  justify-content: center;
 }
 .swiper-thumbnail-slide {
   width: 68px;
@@ -609,16 +616,75 @@ section {
   box-shadow: 0px 22px 44px -12px rgba(255, 57, 57, 0.69);
   border-radius: 6px;
   cursor: pointer;
+  color: #FFFFFF;
+  transition: background, box-shadow 0.3s ease-in-out;
+}
+.swiper-thumbnail-slide__property {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  color: #FFFFFF;
 }
 .swiper-slide-thumb-active .swiper-thumbnail-slide {
   border: 1px solid #2F6DCE;
   background: transparent;
   color: #2F6DCE;
-  box-shadow: 0px 22px 44px -12px rgba(255, 57, 57, 0.69);
+  box-shadow: none;
+}
+
+.winter-sale {
+  padding-top: 0;
+}
+
+.trapeze:before {
+  width: 28px;
+  height: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: auto;
+  right: auto;
+  background-color: #2F6DCE;
+  border-radius: 6px;
+  z-index: 10;
+}
+.trapeze_curved-right {
+  text-align: left;
+  margin-right: auto;
+}
+.trapeze_curved-right:before {
+  right: -14px;
+  transform: skewX(-10deg);
+}
+@media screen and (max-width: 736px) {
+  .trapeze_curved-right:before {
+    width: 26px;
+    right: -7px;
+  }
+}
+.trapeze_curved-left {
+  text-align: right;
+  margin-left: auto;
+}
+.trapeze_curved-left:before {
+  left: -14px;
+  transform: skewX(10deg);
+}
+@media screen and (max-width: 736px) {
+  .trapeze_curved-left:before {
+    width: 26px;
+    left: -7px;
+  }
+}
+
+.advantages_theme_colored {
+  background-color: #E8F6FF;
+}
+.advantages_theme_colored .advantages__row {
+  flex-direction: row-reverse;
+}
+.advantages_theme_colored .advantages__block-colored {
+  outline: 2px solid #FFFFFF;
+  outline-offset: -2px;
 }
 
 @media screen and (max-width: 1088px) {
@@ -804,6 +870,25 @@ section {
   .swiper-picture-slide {
     max-width: 562px;
   }
+  .swiper-picture-slide__content {
+    flex-wrap: wrap;
+  }
+  .swiper-picture-slide__price {
+    flex: 0 0 auto;
+  }
+  .swiper-button-prev {
+    left: 40px;
+  }
+  .swiper-button-next {
+    right: 40px;
+  }
+
+  .advantages_theme_colored .advantages__row {
+    flex-direction: column;
+  }
+  .advantages_theme_colored .swiper-thumbnail-slides {
+    max-width: 225px;
+  }
 }
 @media screen and (max-width: 736px) {
   .wrapper {
@@ -833,14 +918,20 @@ section {
     line-height: 26px;
     margin-bottom: 22px;
   }
-  .advantages__title:before {
-    width: 26px;
-    right: -7px;
-  }
   .advantages__block-list {
     margin-bottom: 16px;
   }
+  .advantages__slider-title {
+    width: 285px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+  }
 
+  .swiper-picture-slides {
+    overflow: visible;
+  }
   .swiper-picture-slide {
     max-width: 310px;
     display: grid;
@@ -879,6 +970,23 @@ section {
   }
   .swiper-picture-slide__price-after-currency {
     font-size: 18px;
+  }
+  .swiper-thumbnail-slides {
+    max-width: 161px;
+  }
+  .swiper-thumbnail-slides_wide {
+    max-width: 225px;
+  }
+  .swiper-thumbnail-slide {
+    width: 24px;
+    height: 8px;
+  }
+  .swiper-thumbnail-slide__property {
+    display: none;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    bottom: -25px;
+    top: auto;
   }
 }
 

@@ -289,6 +289,13 @@ section {
 
 // ***** section winter sale  ***** //
 .advantages {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @include media-max($tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &__title {
     position: relative;
@@ -304,19 +311,6 @@ section {
     font-size: 32px;
     line-height: 40px;
     color: #FFFFFF;
-
-    &:before {
-      width: 28px;
-      height: 100%;
-      position: absolute;
-      content: '';
-      top: 0;
-      right: -14px;
-      transform: skewX(-10deg);
-      background-color: #2F6DCE;
-      border-radius: 6px;
-      z-index: 10;
-    }
   }
 
   &__row {
@@ -454,7 +448,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
+    padding-top: 50px;
     background-color: #F9F9F9;
     border-radius: 6px;
 
@@ -519,7 +513,7 @@ section {
         width: 100%;
         padding: 11px 48px;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
         background: #FFFFFF;
       }
@@ -583,8 +577,19 @@ section {
   &-thumbnail {
 
     &-slides {
-      max-width: 344px;
+      max-width: 384px;
       width: 100%;
+      padding-bottom: 54px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &_wide {
+        max-width: 568px;
+      }
+
+      .swiper-wrapper {
+        justify-content: center;
+      }
     }
 
     &-slide {
@@ -598,11 +603,14 @@ section {
       box-shadow: 0px 22px 44px -12px rgba(255, 57, 57, 0.69);
       border-radius: 6px;
       cursor: pointer;
-
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 24px;
       color: #FFFFFF;
+      @include custom-transition(background, box-shadow);
+
+      &__property {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -611,8 +619,80 @@ section {
       border: 1px solid #2F6DCE;
       background: transparent;
       color: #2F6DCE;
-      box-shadow: 0px 22px 44px -12px rgba(255, 57, 57, 0.69);
+      box-shadow: none;
     }
   }
 }
+
+.winter-sale {
+  padding-top: 0;
+}
+
 // ***** section winter sale  ***** //
+
+
+// ***** section windows regulation  ***** //
+.trapeze {
+
+  &:before {
+    width: 28px;
+    height: 100%;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: auto;
+    right: auto;
+    background-color: #2F6DCE;
+    border-radius: 6px;
+    z-index: 10;
+  }
+
+  &_curved-right {
+    text-align: left;
+    margin-right: auto;
+
+    &:before {
+      right: -14px;
+      transform: skewX(-10deg);
+
+      @include media-max($tablet) {
+        width: 26px;
+        right: -7px;
+      }
+    }
+  }
+
+  &_curved-left {
+    text-align: right;
+    margin-left: auto;
+
+    &:before {
+      left: -14px;
+      transform: skewX(10deg);
+
+      @include media-max($tablet) {
+        width: 26px;
+        left: -7px;
+      }
+    }
+  }
+}
+
+.advantages_theme_colored {
+  background-color: #E8F6FF;
+
+  .advantages__row {
+    flex-direction: row-reverse;
+  }
+
+  .advantages__block-colored {
+    outline: 2px solid #FFFFFF;
+    outline-offset: -2px;
+  }
+
+  //.swiper-thumbnail-slides {
+  //  max-width: 568px;
+  //}
+}
+
+// ***** section windows regulation  ***** //

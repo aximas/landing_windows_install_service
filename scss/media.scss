@@ -217,18 +217,44 @@
         max-width: 100%;
       }
     }
-
-
   }
   .swiper {
     &-picture {
       &-slide {
         max-width: 562px;
+
+        &__content {
+          flex-wrap: wrap;
+        }
+
+        &__price {
+          flex: 0 0 auto;
+        }
       }
+    }
+
+    &-button-prev {
+      left: 40px;
+    }
+
+    &-button-next {
+      right: 40px;
     }
   }
   // ***** section winter sale  ***** //
 
+
+  // ***** section windows regulation  ***** //
+  .advantages_theme_colored {
+    .advantages__row {
+      flex-direction: column;
+    }
+
+    .swiper-thumbnail-slides {
+      max-width: 225px;
+    }
+  }
+  // ***** section windows regulation  ***** //
 }
 
 @include media-max($tablet) {
@@ -237,6 +263,7 @@
     max-width: 320px;
   }
 
+  // *****  section main  ***** //
   .upper-bar {
 
     &__column {
@@ -263,65 +290,82 @@
 
     }
   }
+  // *****  section main  ***** //
+
+  // ***** section winter sale  ***** //
   .advantages {
     &__title {
       padding: 8px 20px;
       font-size: 22px;
       line-height: 26px;
       margin-bottom: 22px;
-
-      &:before {
-        width: 26px;
-        right: -7px;
-      }
     }
+
     &__block {
 
       &-list {
         margin-bottom: 16px;
       }
     }
+
+    &__slider {
+      &-title {
+        width: 285px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+      }
+    }
   }
 
   .swiper {
     &-picture {
+      &-slides {
+        overflow: visible;
+      }
+
       &-slide {
         max-width: 310px;
         display: grid;
-        grid-template-areas:
-                "discount content content content"
-                "discount content content content"
-                "discount price price price";
+        grid-template-areas: "discount content content content" "discount content content content" "discount price price price";
 
         &__discount {
           grid-area: discount;
         }
+
         &__content {
           grid-area: content;
           flex-wrap: nowrap;
           padding: 20px 14px;
         }
+
         &__picture {
           width: 90px;
           margin-right: 16px;
           object-fit: contain;
         }
+
         &__description {
           font-size: 18px;
           line-height: 24px;
         }
+
         &__price {
           grid-area: price;
           flex-direction: row;
           align-items: center;
           padding: 10px 17px;
+
           &-before {
             font-size: 16px;
             margin-right: 6px;
             margin-bottom: 0;
           }
+
           &-after {
             font-size: 28px;
+
             &-currency {
               font-size: 18px;
             }
@@ -329,5 +373,31 @@
         }
       }
     }
+
+    &-thumbnail {
+      &-slides {
+        max-width: 161px;
+
+        &_wide {
+          max-width: 225px;
+        }
+      }
+
+      &-slide {
+        width: 24px;
+        height: 8px;
+
+        &__property {
+          display: none;
+        }
+      }
+    }
+
+    &-button-prev, &-button-next {
+      bottom: -25px;
+      top: auto;
+    }
   }
+  // ***** section winter sale  ***** //
+
 }
