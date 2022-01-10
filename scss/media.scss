@@ -249,13 +249,121 @@
     .advantages__row {
       flex-direction: column;
     }
-
-    .swiper-thumbnail-slides {
-      max-width: 225px;
-    }
   }
   // ***** section windows regulation  ***** //
+
+  // ***** section air box  ***** //
+  .present {
+    &__row {
+      flex-direction: column;
+
+      &-content-gallery {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__boxes-wrapper {
+      flex-direction: column;
+    }
+
+    &__box {
+      &-container {
+        max-width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &__additionally-blocks-wrapper {
+      flex-direction: column;
+    }
+
+    &__additionally {
+      &-block {
+        &:not(:last-child) {
+          padding-bottom: 0;
+        }
+
+        &-title {
+          max-width: 100%;
+        }
+
+        &-list {
+          max-width: 100%;
+        }
+
+        &-img {
+          display: none;
+        }
+
+        &-content {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &__block {
+      padding-top: 19px;
+
+      &-picture {
+        width: 100%;
+        display: none;
+
+        &-mobile-view {
+          display: block;
+        }
+      }
+    }
+  }
+  // ***** section air box  ***** //
+
+  // ***** section cta  ***** //
+  .cta {
+    min-height: 768px;
+
+    &__wrapper {
+      padding-left: 0;
+    }
+
+    &__row {
+      flex-direction: column-reverse;
+    }
+
+    &__column {
+      flex: 0 0 100%;
+
+      &-hero {
+        flex: 0 0 100%;
+        display: flex;
+        min-height: 490px;
+      }
+    }
+
+    &__block {
+      align-items: center;
+    }
+
+    &__hero {
+      &-rectangle {
+        &-outline {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      &-wrapper {
+        &:before {
+          top: -54%;
+        }
+      }
+    }
+  }
+  // ***** section cta  ***** //
 }
+
 
 @include media-max($tablet) {
 
@@ -366,8 +474,16 @@
           &-after {
             font-size: 28px;
 
+            &-xl {
+              font-size: 28px;
+            }
+
             &-currency {
               font-size: 18px;
+
+              &-xl {
+                font-size: 24px;
+              }
             }
           }
         }
@@ -389,6 +505,10 @@
 
         &__property {
           display: none;
+
+          &-text {
+            display: none;
+          }
         }
       }
     }
@@ -399,5 +519,83 @@
     }
   }
   // ***** section winter sale  ***** //
+
+
+  // ***** section air box  ***** //
+  .present {
+
+    &__row {
+      &-content-boxes {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__block {
+      &-title {
+        font-size: 18px;
+        line-height: 100%;
+        margin-bottom: 17px;
+      }
+    }
+  }
+  // ***** section air box  ***** //
+
+
+  // ***** section cta  ***** //
+  .cta {
+
+    &__column {
+      &-hero {
+        min-height: 385px;
+      }
+    }
+
+    &__hero {
+
+      &-wrapper {
+        top: 0;
+      }
+
+      &-rectangle {
+        width: 243px;
+        height: 243px;
+
+        &-inside {
+          width: 208px;
+          height: 208px;
+        }
+      }
+
+      &-man {
+        top: -93px;
+        width: 100%;
+        height: 377px;
+        background-size: cover;
+      }
+    }
+
+    &__block {
+      text-align: center;
+      padding-top: 0;
+    }
+
+    &__btn {
+      &-wrapper {
+        &:before {
+          top: -75%;
+          right: -15%;
+          transform: scale(0.5) rotate(-18deg);
+        }
+      }
+
+      &-description {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  // ***** section cta  ***** //
+
 
 }
