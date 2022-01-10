@@ -1353,7 +1353,7 @@
                     </p>
                 </div>
             </div>
-            <div class="about__column">
+            <div class="about__column about__column-slider">
                 <div class="swiper about__slider-container">
                     <div class="swiper-wrapper about__slider-wrapper">
                         <div class="swiper-slide about__slide">
@@ -1366,8 +1366,8 @@
                             <img src="img/about-slide.jpg" alt="slide picture" class="about__slide-picture">
                         </div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev portfolio__slider-button about__slider-button about__slider-button-prev"></div>
+                    <div class="swiper-button-next portfolio__slider-button about__slider-button about__slider-button-next"></div>
                 </div>
             </div>
         </div>
@@ -1412,27 +1412,27 @@
                     РАБОТЫ:
                 </h4>
                 <ul class="about__block-list about__block-list-day-time">
-                    <li class="about__block-list-title">
+                    <li class="about__block-list-item-title">
                         ОФИС ПРОДАЖ:
                     </li>
-                    <li class="about__block-list">
+                    <li class="about__block-list-item">
                         пн-пт: с 09:00 до 18:00;
                     </li>
-                    <li class="about__block-list">
+                    <li class="about__block-list-item">
                         обед с 13:00 до 14:00;
                     </li>
-                    <li class="about__block-list">
+                    <li class="about__block-list-item">
                         сб: с 10:00 до 16:00;
                     </li>
                 </ul>
                 <ul class="about__block-list about__block-list-day-time">
-                    <li class="about__block-list-title">
+                    <li class="about__block-list-item-title">
                         МАСТЕРА:
                     </li>
-                    <li class="about__block-list">
+                    <li class="about__block-list-item">
                         пн-пт: с 10:00 до 20:00;
                     </li>
-                    <li class="about__block-list">
+                    <li class="about__block-list-item">
                         сб: с 11:00 до 16:00;
                     </li>
                 </ul>
@@ -1448,10 +1448,20 @@
             </div>
             <div class="about__block about__block-mini">
                 <div class="about__block-mini-row about__block-mini-row-colored">
-
+                    <a href="" class="about__block-mini-link">Организация <br>
+                        на карте</a>
                 </div>
                 <div class="about__block-mini-row about__block-mini-row-outlined">
-
+                    <h5 class="about__block-mini-title">
+                        Присоединяйтесь к нам <br>
+                        в Instagram и VK
+                    </h5>
+                    <div class="about__block-mini-social-links">
+                        <a href="#" class="about__block-mini-social-link">
+                        </a>
+                        <a href="#" class="about__block-mini-social-link">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1523,6 +1533,19 @@
             1088: {
                 slidesPerView: 3,
             }
+        }
+    });
+
+    const aboutSlider = new Swiper('.about .swiper', {
+        slidesPerView: 1,
+        width: 630,
+        spaceBetween: 32,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        roundLengths: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         }
     })
 </script>
