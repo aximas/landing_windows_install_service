@@ -1088,27 +1088,114 @@ section {
     }
   }
 }
+
 // ***** section cta  ***** //
 
 // ***** section portfolio  ***** //
 .portfolio {
-  &__wrapper {
-    padding-top: 96px;
-    padding-bottom: 90px;
-  }
+  padding-top: 96px;
+  padding-bottom: 90px;
 
   &__row {
     margin-top: 94px;
   }
 
+  &__slider {
+    &-wrapper {
+      flex-direction: row !important;
+    }
+
+    &-button {
+      width: 38px;
+      height: 38px;
+      background: #1567E9;
+      border-radius: 5px;
+      bottom: 0;
+
+      &:after {
+        color: #FFFFFF;
+      }
+
+      &-prev {
+        left: 449px;
+      }
+
+      &-next {
+        right: 449px;
+      }
+    }
+
+    &-pagination {
+      position: static;
+      margin-top: 64px;
+      margin-bottom: 6px;
+
+      .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+        box-sizing: content-box;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%), #EBECF0;
+        border-radius: 4px;
+        margin: 0 10px !important;
+      }
+
+      .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        border: 1px solid #2F6DCE;
+        background: transparent;
+        border-radius: 4px;
+      }
+    }
+  }
+
   &__slide {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+
     &-thumb {
+      display: flex;
+      flex-direction: column;
+
       &-picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 6px 6px 0 0;
+
+
+        &-container {
+          position: relative;
+          width: 410px;
+          height: 260px;
+          z-index: 30;
+        }
+
+        &-overlay {
+          @include absolute-wide-block;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(0, 38, 99, 0) 61.52%, rgba(21, 103, 233, 0.5) 100%);
+        }
+      }
+
+      &-description {
+        display: flex;
+        background: #E8F6FF;
+        border-radius: 0 0 6px 6px;
+        padding: 22px 82px 38px 20px;
         max-width: 410px;
         width: 100%;
-        height: 260px;
+        min-height: 90px;
+
+        font-size: 16px;
+        line-height: 100%;
+        color: #6F6F6F;
       }
     }
   }
 }
+
 // ***** section portfolio  ***** //

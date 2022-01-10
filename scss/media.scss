@@ -362,6 +362,33 @@
     }
   }
   // ***** section cta  ***** //
+
+  // ***** section portfolio  ***** //
+  .portfolio {
+    &__wrapper {
+      max-width: 100%;
+    }
+
+    &__slide {
+      justify-content: center;
+
+      &-thumb {
+        &-picture {
+          &-container {
+            width: 368px;
+
+          }
+        }
+
+        &-description {
+          width: 368px;
+
+        }
+      }
+    }
+  }
+  // ***** section portfolio  ***** //
+
 }
 
 
@@ -597,5 +624,54 @@
   }
   // ***** section cta  ***** //
 
+  // ***** section portfolio  ***** //
+  .portfolio {
+    padding-top: 60px;
+    padding-bottom: 49px;
+
+    &__wrapper {
+      max-width: 100%;
+    }
+
+    &__row {
+      margin-top: 25px;
+    }
+
+    &__slider {
+      &-pagination {
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        .swiper-pagination-bullet {
+          width: 6px;
+          height: 6px;
+          margin: 0 5px !important;
+          border-radius: 50%;
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%), #EBECF0;
+        }
+      }
+
+      &-button {
+        bottom: 0;
+      }
+    }
+
+    &__slide {
+      &-thumb {
+        &-picture {
+          &-container {
+            width: 100vw;
+            height: 202px;
+          }
+        }
+
+        &-description {
+          width: 100vw;
+          min-height: 70px;
+        }
+      }
+    }
+  }
+  // ***** section portfolio  ***** //
 
 }
