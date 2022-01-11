@@ -58,17 +58,17 @@
                 </a>
                 <ul class="header__menu menu hide-mobile-menu" data-da="body,1088,first">
                     <li class="menu__item">
-                        <a href="#" class="menu__link">
+                        <a href="#air-box" class="menu__link">
                             Подарок от ПРОФИ
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">
+                        <a href="#portfolio" class="menu__link">
                             Наши СпецЗаказы
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">
+                        <a href="#about" class="menu__link">
                             О компании
                         </a>
                     </li>
@@ -1156,7 +1156,7 @@
     </div>
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
     <div class="portfolio__wrapper wrapper">
         <h3 class="portfolio__title advantages__title trapeze trapeze_curved-right">
             ПОСМОТРИТЕ ФОТО НАШИХ СПЕцзаказов
@@ -1318,7 +1318,7 @@
     </div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
     <div class="about__wrapper wrapper">
         <h3 class="about__title advantages__title trapeze trapeze_curved-right" data-da=".about,1088,first">
             О КОМПАНИИ:
@@ -1526,6 +1526,21 @@
         </div>
     </div>
 </footer>
+
+<!--  modal window  -->
+<div class="modal">
+    <div class="modal__container">
+        <button class="btn__modal-close btn__cross" type="button"></button>
+        <form action="" class="modal__form form form-modal">
+            <input type="text" name="name" class="form__input">
+            <input type="text" name="tel" class="form__input">
+            <button class="form_btn btn">
+                Отправить
+            </button>
+            <input type="checkbox" class="form_checkbox">
+        </form>
+    </div>
+</div>
 
 <!-- Dynamic Adapt v.1  -->
 <script src="js/vendors/dynamic_adapt.js"></script>
