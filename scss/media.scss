@@ -245,12 +245,20 @@
 
 
   // ***** section windows regulation  ***** //
-  .advantages_theme_colored {
+  .windows-regulation {
     .advantages__row {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
   // ***** section windows regulation  ***** //
+
+  // ***** section windows for winter  ***** //
+  .windows-for-winter {
+    .advantages__row {
+      flex-direction: column-reverse;
+    }
+  }
+  // ***** section windows for winter  ***** //
 
   // ***** section air box  ***** //
   .present {
@@ -389,6 +397,118 @@
   }
   // ***** section portfolio  ***** //
 
+  // ***** section about  ***** //
+  .about {
+    &__row {
+      flex-direction: column;
+
+      &-has-slider {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__content {
+      &-wrapper {
+        width: 100%;
+      }
+    }
+
+    &__slide {
+
+    }
+
+    &__slider {
+
+      &-container {
+        margin-bottom: 40px;
+      }
+
+      &-button {
+        top: 50%;
+        bottom: auto;
+
+        &-prev {
+          left: -1px;
+        }
+
+        &-next {
+          right: -1px;
+        }
+      }
+    }
+
+    &__block {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      &-link {
+        max-width: 240px;
+      }
+    }
+  }
+  // ***** section about  ***** //
+
+
+  // ***** section order  ***** //
+  .order {
+    &__row {
+      flex-direction: column-reverse;
+    }
+
+    &__column {
+      &-hero {
+        height: 400px;
+      }
+    }
+
+    &__hero {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+      &-rectangle {
+
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__btn {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  // ***** section order  ***** //
+
+  // *****  footer  ***** //
+  .footer {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+
+    &__content {
+      max-width: 50%;
+
+      &-developed-by {
+        text-align: right;
+      }
+
+      &-not-public {
+        max-width: 100%;
+        order: -1;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  // *****  footer  ***** //
+
 }
 
 
@@ -440,6 +560,10 @@
 
       &-list {
         margin-bottom: 16px;
+      }
+
+      &-picture {
+        height: 180px;
       }
     }
 
@@ -673,5 +797,99 @@
     }
   }
   // ***** section portfolio  ***** //
+
+  // ***** section about  ***** //
+  .about {
+    padding: 60px 0;
+
+    &__slide {
+
+      &-picture {
+        height: 180px;
+      }
+    }
+
+    &__slider {
+
+      &-button {
+        display: none;
+      }
+
+      &-pagination {
+        display: block;
+
+        .swiper-pagination-bullet {
+          background: #FFFFFF;
+          opacity: 1;
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background: transparent;
+          border: 1px solid #2F6DCE;
+        }
+      }
+    }
+
+    &__block {
+      min-height: 100%;
+
+      &-background-leaf {
+        display: none;
+      }
+
+      &-link {
+        margin: 0 auto;
+      }
+
+      &-mini {
+        &-row {
+          height: 60px;
+
+          &-outlined {
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+
+        &-title {
+          margin-bottom: 0;
+          margin-right: 21px;
+        }
+      }
+    }
+  }
+  // ***** section about  ***** //
+
+  // ***** section order  ***** //
+  .order {
+    &__column {
+      &-hero {
+        height: 230px;
+      }
+    }
+
+    &__hero {
+      &-rectangle {
+        width: 335px;
+        height: 335px;
+        top: 10%;
+      }
+
+      &-man {
+        width: 218px;
+        height: 280px;
+        background-size: contain;
+      }
+    }
+  }
+  // ***** section order  ***** //
+
+  // *****  footer  ***** //
+  .footer {
+    &__content {
+
+    }
+  }
+  // *****  footer  ***** //
 
 }
