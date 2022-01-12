@@ -479,6 +479,26 @@ section {
   box-shadow: 0 22px 44px -12px #005AE9;
   border-radius: 71px;
 }
+.btn__move-up {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 40;
+  width: 38px;
+  height: 38px;
+  background: #1567E9;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+.btn__move-up-icon {
+  display: block;
+  color: #FFFFFF;
+  transform: rotate(-90deg);
+  font-size: 18px;
+}
+.btn__hidden {
+  opacity: 0;
+}
 
 .advantages {
   padding-top: 90px;
@@ -1873,6 +1893,13 @@ section {
 
   .btn {
     font-size: 16px;
+  }
+  .btn__move-up {
+    width: 26px;
+    height: 26px;
+  }
+  .btn__move-up-icon {
+    font-size: 14px;
   }
 
   .advantages__row {

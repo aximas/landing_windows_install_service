@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         body = document.querySelector('body'),
         modal = document.querySelector('.modal'),
         modalCallButtons = document.querySelectorAll('.btn__order-master'),
-        modalCloseButton = document.querySelector('.btn__modal-close');
+        modalCloseButton = document.querySelector('.btn__modal-close'),
+        moveUpButton = document.querySelector('.btn__move-up');
     let modalOpen = false;
 
     // mobile menu toggle
@@ -56,5 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // add event for close modal window
     modalToggle(modalCloseButton, modal);
+
+    moveUpButton.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 1000) {
+            moveUpButton.classList.remove('btn__hidden');
+        } else {
+            moveUpButton.classList.add('btn__hidden');
+        }
+    })
+
 
 })
