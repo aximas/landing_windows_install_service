@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const menuButtonToggle = document.querySelector('.mobile-menu-toggle'),
         menu = document.querySelector('.header__menu'),
+        menuLinks = document.querySelectorAll('.menu__link'),
         body = document.querySelector('body'),
         modal = document.querySelector('.modal'),
         modalCallButtons = document.querySelectorAll('.btn__order-master'),
         modalCloseButton = document.querySelector('.btn__modal-close');
     let modalOpen = false;
 
+    // mobile menu toggle
     menuButtonToggle.addEventListener('click', (event) => {
         if (menu.classList.contains('hide-mobile-menu')) {
             menu.classList.remove('hide-mobile-menu');
@@ -21,6 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // close mobile menu if menu link clicked
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener('click', () => {
+            menu.classList.add('hide-mobile-menu');
+            menuButtonToggle.classList.remove('mobile-menu-toggle-close');
+            body.style.overflowY = '';
+        });
+    })
+
+    // modal window toggle
     function modalToggle(button, modalElement) {
         button.addEventListener('click', () => {
             if (modalOpen) {
@@ -37,10 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // add events for all buttons
     modalCallButtons.forEach(button => {
         modalToggle(button, modal);
     });
 
+    // add event for close modal window
     modalToggle(modalCloseButton, modal);
 
 })
