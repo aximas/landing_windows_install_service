@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menu = document.querySelector('.header__menu'),
         body = document.querySelector('body'),
         modal = document.querySelector('.modal'),
-        modalCallButtons = document.querySelectorAll('.advantages__btn'),
+        modalCallButtons = document.querySelectorAll('.btn__order-master'),
         modalCloseButton = document.querySelector('.btn__modal-close');
     let modalOpen = false;
 
