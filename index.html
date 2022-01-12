@@ -1568,6 +1568,7 @@
 <!-- swiper -->
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script>
+    // advantages sections slider init
     function advantagesSliderInit(sliderParent) {
         const slidersParentElement = document.querySelectorAll(`.${sliderParent}`);
 
@@ -1594,6 +1595,7 @@
 
     advantagesSliderInit('advantages');
 
+    // portfolio section slider init
     const portfolioSlider = new Swiper('.portfolio .swiper', {
         slidesPerView: 3,
         grid: {
@@ -1626,6 +1628,7 @@
         }
     });
 
+    // about section slider init
     const aboutSlider = new Swiper('.about .swiper', {
         slidesPerView: 1,
         width: 630,

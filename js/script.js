@@ -58,10 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // add event for close modal window
     modalToggle(modalCloseButton, modal);
 
+    // move-up button scroll top logic
     moveUpButton.addEventListener('click', () => {
         window.scrollTo(0, 0);
     });
 
+    // move-up button hidden toggle
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 1000) {
             moveUpButton.classList.remove('btn__hidden');
