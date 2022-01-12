@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function modalToggler(button, modalElement) {
+    function modalToggle(button, modalElement) {
         button.addEventListener('click', () => {
             if (modalOpen) {
                 modalElement.style.visibility = 'hidden';
@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     modalCallButtons.forEach(button => {
-        modalToggler(button, modal);
+        modalToggle(button, modal);
     });
 
-    modalToggler(modalCloseButton, modal);
+    modalToggle(modalCloseButton, modal);
 
 })
