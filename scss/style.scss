@@ -283,6 +283,49 @@ section {
   &:hover {
     box-shadow: none;
   }
+
+  &__cross {
+    &-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      margin: auto;
+      width: 24px;
+      height: 4px;
+      border-radius: 9px;
+      background: #2F6DCE;
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__modal-close {
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    position: absolute;
+    top: 51px;
+    right: 51px;
+  }
+
+  &__form-submit {
+    max-width: 282px;
+    width: 100%;
+    padding: 24px 70px;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #005AE9;
+    box-shadow: 0px 22px 44px -12px #005AE9;
+    border-radius: 71px;
+  }
 }
 
 // *****  section main  ***** //
@@ -1636,3 +1679,116 @@ section {
 
 // *****  footer  ***** //
 
+
+// *****  modal  ***** //
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: #FFFFFF;
+  transition: opacity .5s ease-in-out;
+
+  &__container {
+    max-width: 750px;
+    width: 100%;
+    max-height: 750px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__form {
+    max-width: 550px;
+    width: 100%;
+    max-height: 521px;
+    height: 100%;
+    padding: 67px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 78px rgba(21, 103, 233, 0.24);
+    border-radius: 6px;
+  }
+}
+
+// *****  modal  ***** //
+
+// *****  form  ***** //
+.form {
+  &__input {
+    max-width: 445px;
+    width: 100%;
+    padding: 30px 60px;
+    background: #E8F6FF;
+    border-radius: 94px;
+    border: none;
+
+    font-size: 18px;
+    line-height: 24px;
+    color: #2F6DCE;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &:focus {
+      outline: 2px solid #005AE9;
+    }
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 24px;
+      color: #2F6DCE;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+    margin-bottom: 24px;
+  }
+
+  &__checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+
+    &-label {
+      position: relative;
+      display: block;
+      max-width: 150px;
+      width: 100%;
+      padding-left: 16px;
+
+      font-size: 12px;
+      line-height: 100%;
+      color: #939393;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      margin-left: -16px;
+      width: 14px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 0C7.76142 0 10 2.23858 10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0ZM5.00024 0.999985C2.79111 0.999985 1.00024 2.79085 1.00024 4.99998C1.00024 7.20912 2.79111 8.99998 5.00024 8.99998C7.20938 8.99998 9.00024 7.20912 9.00024 4.99998C9.00024 2.79085 7.20938 0.999985 5.00024 0.999985Z' fill='%23939393'/%3E%3C/svg%3E%0A");
+    }
+
+    &:checked + &-icon {
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6 1C8.76142 1 11 3.23858 11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6C1 3.23858 3.23858 1 6 1ZM6.00024 1.99998C3.7911 1.99998 2.00024 3.79085 2.00024 5.99998C2.00024 8.20912 3.7911 9.99998 6.00024 9.99998C8.20938 9.99998 10.0002 8.20912 10.0002 5.99998C10.0002 3.79085 8.20938 1.99998 6.00024 1.99998Z' fill='%23939393'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.2929 0.292893L6 5.58579L4.70711 4.29289C4.31658 3.90237 3.68342 3.90237 3.29289 4.29289C2.90237 4.68342 2.90237 5.31658 3.29289 5.70711L5.29289 7.70711C5.68342 8.09763 6.31658 8.09763 6.70711 7.70711L12.7071 1.70711C13.0976 1.31658 13.0976 0.683418 12.7071 0.292893C12.3166 -0.0976311 11.6834 -0.0976311 11.2929 0.292893Z' fill='%231567E9'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+// *****  form  ***** //

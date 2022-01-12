@@ -73,7 +73,7 @@
                         </a>
                     </li>
                 </ul>
-                <button class="header__nav-button mobile-menu-toggle">
+                <button class="header__nav-button mobile-menu-toggle" type="button">
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -92,7 +92,7 @@
                     Профессиональные услуги по ремонту и обслуживанию окон
                 </p>
                 <div class="banner__btn-wrapper">
-                    <button class="banner__btn btn">
+                    <button class="banner__btn btn" type="button">
                         КАЛЬКУЛЯТОР УСЛУГ
                     </button>
                     <small class="banner__btn-description">
@@ -196,7 +196,7 @@
                     </div>
                 </div>
                 <div class="advantages__btn-wrapper">
-                    <button class="advantages__btn btn">
+                    <button class="advantages__btn btn" type="button">
                         выезд мастера
                     </button>
                     <small class="advantages__btn-description">
@@ -406,7 +406,8 @@
             </div>
             <div class="advantages__column">
                 <div class="advantages__block">
-                    <img src="img/advantages_img.png" alt="" class="advantages__block-picture advantages__block-picture-sm">
+                    <img src="img/advantages_img.png" alt=""
+                         class="advantages__block-picture advantages__block-picture-sm">
                     <h4 class="advantages__block-title">
                         Что Вы получите в итоге?
                     </h4>
@@ -434,7 +435,7 @@
                     </div>
                 </div>
                 <div class="advantages__btn-wrapper">
-                    <button class="advantages__btn btn">
+                    <button class="advantages__btn btn" type="button">
                         выезд мастера
                     </button>
                     <small class="advantages__btn-description">
@@ -702,7 +703,8 @@
             </div>
             <div class="advantages__column">
                 <div class="advantages__block">
-                    <img src="img/advantages_img_2.png" alt="" class="advantages__block-picture advantages__block-picture-md">
+                    <img src="img/advantages_img_2.png" alt=""
+                         class="advantages__block-picture advantages__block-picture-md">
                     <h4 class="advantages__block-title">
                         Что Вы получите в итоге?
                     </h4>
@@ -730,7 +732,7 @@
                     </div>
                 </div>
                 <div class="advantages__btn-wrapper">
-                    <button class="advantages__btn btn">
+                    <button class="advantages__btn btn" type="button">
                         выезд мастера
                     </button>
                     <small class="advantages__btn-description">
@@ -1134,7 +1136,7 @@
                         ПОДГОТОВКА ОКОН К ЗИМЕ И ОБСЛУЖИВАНИЕ ОКОН ОТ ПРОФЕССИОНАЛОВ.
                     </p>
                     <div class="cta__btn-wrapper advantages__btn-wrapper">
-                        <button class="cta__btn advantages__btn btn">
+                        <button class="cta__btn advantages__btn btn" type="button">
                             РАССЧИТАТЬ СТОИМОСТЬ
                         </button>
                         <small class="cta__btn-description advantages__btn-description">
@@ -1444,7 +1446,7 @@
                 <h4 class="about__block-title">
                     Посмотрите другие наши услуги по ремонту и обслуживанию окон
                 </h4>
-                <button class="about__block-button btn">
+                <button class="about__block-button btn" type="button">
                     СМОТРЕТЬ
                 </button>
                 <img src="img/about_window.png" alt="window" class="about__block-picture">
@@ -1500,7 +1502,7 @@
                         Вы получите фиксированный расчет стоимости услуг
                     </li>
                 </ul>
-                <button class="order__btn advantages__btn btn">
+                <button class="order__btn advantages__btn btn" type="button">
                     выезд мастера
                 </button>
             </div>
@@ -1530,14 +1532,24 @@
 <!--  modal window  -->
 <div class="modal">
     <div class="modal__container">
-        <button class="btn__modal-close btn__cross" type="button"></button>
+        <button class="btn__modal-close btn__cross" type="button">
+            <span class="btn__cross-line"></span>
+            <span class="btn__cross-line"></span>
+        </button>
         <form action="" class="modal__form form form-modal">
-            <input type="text" name="name" class="form__input">
-            <input type="text" name="tel" class="form__input">
-            <button class="form_btn btn">
+            <input type="text" name="name" class="form__input" placeholder="Имя" required>
+            <input type="text" name="tel" class="form__input" placeholder="Телефон" required>
+            <button class="form__btn btn btn__form-submit">
                 Отправить
             </button>
-            <input type="checkbox" class="form_checkbox">
+            <div class="form__checkbox-wrapper">
+                <label class="form__checkbox-label">
+                    <input type="checkbox" class="form__checkbox" required>
+                    <span class="form__checkbox-icon"></span>
+                    Cогласен на обработку
+                    персональных данных
+                </label>
+            </div>
         </form>
     </div>
 </div>
