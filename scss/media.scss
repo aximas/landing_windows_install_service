@@ -331,8 +331,20 @@
   .cta {
     min-height: 768px;
 
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      content: none;
+    }
+
     &__wrapper {
       padding-left: 0;
+
+      &:before {
+        content: none;
+      }
     }
 
     &__row {
@@ -454,6 +466,21 @@
 
   // ***** section order  ***** //
   .order {
+
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      content: none;
+    }
+
+    &__wrapper {
+      &:before {
+        content: none;
+      }
+    }
+
     &__row {
       flex-direction: column-reverse;
     }
